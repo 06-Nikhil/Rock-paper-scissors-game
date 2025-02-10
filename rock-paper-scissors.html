@@ -3,45 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="rock-paper-scissors.css">
-    <title>Rock Paper Scissors</title>
+    <title>testing</title>
+    <style>
+        body{
+    background-color: rgb(25, 25, 25);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rock-paper-scissors-button{
+    border-radius: 200px;
+    border-width: 3px;
+    border-style: solid;
+    margin-right: 9px;
+    background-color: rgb(25, 25, 25);
+    border-color: white;
+    margin-top: 12px;
+}
+img{
+    height: 50px;
+    padding: 30px 25px 28px 25px;
+    transition: 0.3s
+}
+h1{
+    font-size: 30px;
+    margin-top: 30px;
+}
+img:hover{
+    transform: scale(1.2);
+}
+    </style>
 </head>
 <body>
-
     <h1>Rock Paper Scissors</h1>
     
     <div class="buttons">
         <button class="rock-paper-scissors-button"
         onclick="
-           let randomNumber = Math.random();
-       if(randomNumber >= 0 && randomNumber < (1/3)){
-           alert('You picked Rock.Computer chose Rock.Tie');
-       }
-       else if(randomNumber >= (1/3) && randomNumber < (2/3)){
-           alert('You picked Rock.Computer chose Paper.You lose');
-       }
-       else if(randomNumber >= (2/3) && randomNumber < 1){
-           alert('You picked Rock.Computer chose Scissors.You Win');
-       }
+        move();
        "><img src="rock-emoji.png"></button>
-   
+
        <button class="rock-paper-scissors-button" 
        onclick="
-       randomNumber = Math.random();
-         if(randomNumber >= 0 && randomNumber < (1/3)){
-           alert('You picked Paper.Computer chose Rock.You win');
-       }
-       else if(randomNumber >= (1/3) && randomNumber < (2/3)){
-           alert('You picked Paper.Computer chose Paper.Tie');
-       }
-       else if(randomNumber >= (2/3) && randomNumber < 1){
-           alert('You picked Paper.Computer chose Scissors.You Lose');
-       }
+      move();
        "><img src="paper-emoji.png"></button>
    
        <button class="rock-paper-scissors-button"
        onclick="
-        randomNumber = Math.random();
+      move();
+       "><img src="scissors-emoji.png"></button>
+   
+    </div>
+   
+    
+    <script>
+        function move(){
+           let randomNumber = Math.random();
          if(randomNumber >= 0 && randomNumber <= (1/3)){
            alert('You picked Scissors.Computer chose Rock.You Lose')
        }
@@ -51,12 +68,7 @@
        else if(randomNumber >= (2/3) && randomNumber < 1){
            alert('You picked Scissors.Computer chose Scissors.Tie')
        }
-       "><img src="scissors-emoji.png"></button>
-   
-    </div>
-   
-    
-    <script>
+        };
     </script>
 </body>
-</html>
+</html> 
