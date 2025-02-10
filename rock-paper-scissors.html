@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rock-paper-scissors.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+
+    <h1>Rock Paper Scissors</h1>
+    
+    <div class="buttons">
+        <button class="rock-paper-scissors-button"
+        onclick="
+           let randomNumber = Math.random();
+       if(randomNumber >= 0 && randomNumber < (1/3)){
+           alert('You picked Rock.Computer chose Rock.Tie');
+       }
+       else if(randomNumber >= (1/3) && randomNumber < (2/3)){
+           alert('You picked Rock.Computer chose Paper.You lose');
+       }
+       else if(randomNumber >= (2/3) && randomNumber < 1){
+           alert('You picked Rock.Computer chose Scissors.You Win');
+       }
+       "><img src="rock-emoji.png"></button>
+   
+       <button class="rock-paper-scissors-button" 
+       onclick="
+       randomNumber = Math.random();
+         if(randomNumber >= 0 && randomNumber < (1/3)){
+           alert('You picked Paper.Computer chose Rock.You win');
+       }
+       else if(randomNumber >= (1/3) && randomNumber < (2/3)){
+           alert('You picked Paper.Computer chose Paper.Tie');
+       }
+       else if(randomNumber >= (2/3) && randomNumber < 1){
+           alert('You picked Paper.Computer chose Scissors.You Lose');
+       }
+       "><img src="paper-emoji.png"></button>
+   
+       <button class="rock-paper-scissors-button"
+       onclick="
+        randomNumber = Math.random();
+         if(randomNumber >= 0 && randomNumber <= (1/3)){
+           alert('You picked Scissors.Computer chose Rock.You Lose')
+       }
+       else if(randomNumber >= (1/3) && randomNumber <= (2/3)){
+           alert('You picked Scissors.Computer chose Paper.You Lose')
+       }
+       else if(randomNumber >= (2/3) && randomNumber < 1){
+           alert('You picked Scissors.Computer chose Scissors.Tie')
+       }
+       "><img src="scissors-emoji.png"></button>
+   
+    </div>
+   
+    
+    <script>
+    </script>
+</body>
+</html>
